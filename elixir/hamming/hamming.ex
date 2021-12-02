@@ -9,7 +9,7 @@ defmodule Hamming do
   """
   @spec hamming_distance([char], [char]) :: {:ok, non_neg_integer} | {:error, String.t()}
   def hamming_distance(strand1, strand2) when length(strand1) != length(strand2) do # using that guard, yo.
-    {:error, "Lists must be of the same type"}
+    {:error, "strands must be of equal length"}
   end
 
   @spec hamming_distance([char], [char]) :: {:ok, non_neg_integer} | {:error, String.t()}
